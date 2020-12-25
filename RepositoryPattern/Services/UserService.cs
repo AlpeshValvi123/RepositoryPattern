@@ -3,6 +3,7 @@ using RepositoryPattern.Services.Interface;
 using RepositoryPattern.Services.Repository;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RepositoryPattern.Services
@@ -52,18 +53,18 @@ namespace RepositoryPattern.Services
             return user;
         }
 
-        ///// <summary>
-        ///// Get a user by email
-        ///// </summary>
-        ///// <param name="email">Email</param>
-        ///// <returns>User</returns>
-        //public virtual User GetUserByEmail(string email)
-        //{
-        //    if (string.IsNullOrEmpty(email))
-        //        return null;
+        /// <summary>
+        /// Get a user by email
+        /// </summary>
+        /// <param name="email">Email</param>
+        /// <returns>User</returns>
+        public virtual User GetUserByEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+                return null;
 
-        //    return _userRepository.Query(x => x.Email == email).FirstOrDefault();
-        //}
+            return _userRepository.Query(x => x.Email == email).FirstOrDefault();
+        }
 
         /// <summary>
         /// Get users by identifiers

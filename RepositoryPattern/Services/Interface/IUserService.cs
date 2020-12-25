@@ -19,12 +19,12 @@ namespace RepositoryPattern.Services.Interface
         /// <returns>Users</returns>
         Task<IEnumerable<User>> GetAll();
 
-        ///// <summary>
-        ///// Get a customer by email
-        ///// </summary>
-        ///// <param name="email">User email</param>
-        ///// <returns>A User</returns>
-        //User GetUserByEmail(string email);
+        /// <summary>
+        /// Get a customer by email
+        /// </summary>
+        /// <param name="email">User email</param>
+        /// <returns>A User</returns>
+        User GetUserByEmail(string email);
 
 
         /// <summary>
